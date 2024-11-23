@@ -1,8 +1,8 @@
-text = input("Text: ")
-words = 0
-sentences = 0
-letters = 0
-ending = False
+text: str = input("Text: ")
+words: int = 0
+sentences: int = 0
+letters: int = 0
+ending: bool = False
 
 for char in text:
     print(char, end="")
@@ -21,12 +21,12 @@ for char in text:
 print()
 
 
-avg_word_length = letters / words * 100
-avg_sentence_length = sentences / words * 100
+avg_word_length: float = letters / words * 100
+avg_sentence_length: float = sentences / words * 100
 print(f"wl:{round(avg_word_length)}, sl:{round(avg_sentence_length)}, words:{words}")
 
 
-grade = 0.0588 * avg_word_length - 0.296 * avg_sentence_length - 15.8
+grade: float = 0.0588 * avg_word_length - 0.296 * avg_sentence_length - 15.8
 
 if grade < 1:
     print("Before Grade 1")
